@@ -44,10 +44,10 @@
             <requiredInput href="#node_1"/>
         </informationRequirement>
         <knowledgeRequirement>
-            <requiredKnowledge href="#node_2"/>
+            <requiredKnowledge href="#node_4"/>
         </knowledgeRequirement>
     </decision>
-    <businessKnowledgeModel id="node_2" name="Risk Prediction">
+    <businessKnowledgeModel id="node_4" name="Risk Prediction">
         <extensionElements>
             <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
                 <property name="ads.designer.bkKind"><![CDATA[prediction]]></property>
@@ -55,7 +55,7 @@
         </extensionElements>
         <variable name="Risk Prediction" typeRef="java.lang.String"/>
         <encapsulatedLogic typeRef="java.lang.String">
-            <formalParameter name="inputType" typeRef="java.lang.String"/>
+            <formalParameter name="loan" typeRef="Loan"/>
             <context>
                 <contextEntry>
                     <variable name="class"/>
@@ -66,7 +66,7 @@
                 <contextEntry>
                     <variable name="method signature"/>
                     <literalExpression>
-                        <text>"run(java.lang.String)"</text>
+                        <text>"run(Loan)"</text>
                     </literalExpression>
                 </contextEntry>
             </context>

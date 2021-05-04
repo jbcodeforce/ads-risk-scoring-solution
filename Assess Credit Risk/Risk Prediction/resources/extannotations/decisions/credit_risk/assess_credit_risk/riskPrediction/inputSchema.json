@@ -2,7 +2,7 @@
   "id" : "auto_ai_kb_input_schema",
   "fields" : [ {
     "name" : "CheckingStatus",
-    "type" : "string",
+    "type" : "other",
     "nullable" : true,
     "jsonName" : "CheckingStatus"
   }, {
@@ -12,12 +12,12 @@
     "jsonName" : "LoanDuration"
   }, {
     "name" : "CreditHistory",
-    "type" : "string",
+    "type" : "other",
     "nullable" : true,
     "jsonName" : "CreditHistory"
   }, {
     "name" : "LoanPurpose",
-    "type" : "string",
+    "type" : "other",
     "nullable" : true,
     "jsonName" : "LoanPurpose"
   }, {
@@ -27,12 +27,12 @@
     "jsonName" : "LoanAmount"
   }, {
     "name" : "ExistingSavings",
-    "type" : "string",
+    "type" : "other",
     "nullable" : true,
     "jsonName" : "ExistingSavings"
   }, {
     "name" : "EmploymentDuration",
-    "type" : "string",
+    "type" : "other",
     "nullable" : true,
     "jsonName" : "EmploymentDuration"
   }, {
@@ -42,12 +42,12 @@
     "jsonName" : "InstallmentPercent"
   }, {
     "name" : "Sex",
-    "type" : "string",
+    "type" : "other",
     "nullable" : true,
     "jsonName" : "Sex"
   }, {
     "name" : "OthersOnLoan",
-    "type" : "string",
+    "type" : "other",
     "nullable" : true,
     "jsonName" : "OthersOnLoan"
   }, {
@@ -57,7 +57,7 @@
     "jsonName" : "CurrentResidenceDuration"
   }, {
     "name" : "OwnsProperty",
-    "type" : "string",
+    "type" : "other",
     "nullable" : true,
     "jsonName" : "OwnsProperty"
   }, {
@@ -67,12 +67,12 @@
     "jsonName" : "Age"
   }, {
     "name" : "InstallmentPlans",
-    "type" : "string",
+    "type" : "other",
     "nullable" : true,
     "jsonName" : "InstallmentPlans"
   }, {
     "name" : "Housing",
-    "type" : "string",
+    "type" : "other",
     "nullable" : true,
     "jsonName" : "Housing"
   }, {
@@ -82,7 +82,7 @@
     "jsonName" : "ExistingCreditsCount"
   }, {
     "name" : "Job",
-    "type" : "string",
+    "type" : "other",
     "nullable" : true,
     "jsonName" : "Job"
   }, {
@@ -92,12 +92,12 @@
     "jsonName" : "Dependents"
   }, {
     "name" : "Telephone",
-    "type" : "string",
+    "type" : "other",
     "nullable" : true,
     "jsonName" : "Telephone"
   }, {
     "name" : "ForeignWorker",
-    "type" : "string",
+    "type" : "other",
     "nullable" : true,
     "jsonName" : "ForeignWorker"
   } ]
