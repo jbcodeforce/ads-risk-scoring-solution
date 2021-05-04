@@ -1,0 +1,211 @@
+
+
+public class Account
+        property "ads.typeId" "2"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Account"
+        property "de.generated" "true"
+{
+    public java.lang.Long balance
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "balance"
+                property update "true";
+    public string type
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "type"
+                property update "true";
+    public Account(java.lang.Long balance, string type)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Account()
+                property "dataio.default" "true";
+}
+
+public class Borrower
+        property "ads.typeId" "1"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Borrower"
+        property "de.generated" "true"
+{
+    public java.util.List accountses domain 0,* class Account
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "accountses"
+                property update "true";
+    public java.lang.Long age
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "age"
+                property update "true";
+    public boolean citizen
+                property "ads.attributeId" "12"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "citizen"
+                property update "true";
+    public string creditHistory
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "credit history"
+                property update "true";
+    public java.lang.Long dependents
+                property "ads.attributeId" "10"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "dependents"
+                property update "true";
+    public string housing
+                property "ads.attributeId" "13"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "housing"
+                property update "true";
+    public string installmentPlans
+                property "ads.attributeId" "15"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "installment plans"
+                property update "true";
+    public string jobType
+                property "ads.attributeId" "7"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "job type"
+                property update "true";
+    public java.lang.Long linesOfCredit
+                property "ads.attributeId" "9"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "lines of credit"
+                property update "true";
+    public string phoneNumber
+                property "ads.attributeId" "11"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "phone number"
+                property update "true";
+    public string propertyOwnership
+                property "ads.attributeId" "14"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "property ownership"
+                property update "true";
+    public string role
+                property "ads.attributeId" "16"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "role"
+                property update "true";
+    public string sex
+                property "ads.attributeId" "8"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "sex"
+                property update "true";
+    public java.lang.Long yearsAtCurrentAddress
+                property "ads.attributeId" "5"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "years at current address"
+                property update "true";
+    public string yearsEmployed
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "years employed"
+                property update "true";
+    public java.lang.Long yearsWithBank
+                property "ads.attributeId" "6"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "years with bank"
+                property update "true";
+    public Borrower(java.util.List accountses domain 0,* class Account, 
+        java.lang.Long age, 
+        string creditHistory, 
+        java.lang.Long dependents, 
+        string housing, 
+        string installmentPlans, 
+        boolean citizen, 
+        string jobType, 
+        java.lang.Long linesOfCredit, 
+        string phoneNumber, 
+        string propertyOwnership, 
+        string role, 
+        string sex, 
+        java.lang.Long yearsAtCurrentAddress, 
+        string yearsEmployed, 
+        java.lang.Long yearsWithBank)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Borrower()
+                property "dataio.default" "true";
+    public void addTo_accountses(Account accountses)
+                property collectionAttribute "accountses"
+                property update "true";
+    public void clear_accountses()
+                property collectionAttribute "accountses"
+                property update "true";
+    public void removeFrom_accountses(Account accountses)
+                property collectionAttribute "accountses"
+                property update "true";
+    public void set_accountses(java.util.Collection accountses domain 0,* class Account)
+                property collectionAttribute "accountses"
+                property update "true";
+}
+
+public class Loan
+        property "ads.typeId" "3"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Loan"
+        property "de.generated" "true"
+{
+    public Borrower borrower
+                property "ads.attributeId" "5"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "borrower"
+                property update "true";
+    public Borrower co$borrower
+                property "ads.attributeId" "6"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "co-borrower"
+                property update "true";
+    public java.lang.Long duration
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "duration"
+                property update "true";
+    public java.lang.Long installmentPercent
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "installment percent"
+                property update "true";
+    public java.lang.Long loanAmount
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "loan amount"
+                property update "true";
+    public string loanPurpose
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "loan purpose"
+                property update "true";
+    public Loan(Borrower borrower, Borrower co$borrower, java.lang.Long duration, java.lang.Long installmentPercent, java.lang.Long loanAmount, string loanPurpose)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Loan()
+                property "dataio.default" "true";
+}
+
+public class Risk
+        property "ads.typeId" "5"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Risk"
+        property "de.generated" "true"
+{
+    public RiskLevel combinedValue
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "combined value"
+                property update "true";
+    public RiskLevel predictiveRiskComponent
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "predictive risk component"
+                property update "true";
+    public RiskLevel relationshipRiskComponent
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "relationship risk component"
+                property update "true";
+    public Risk(RiskLevel combinedValue, RiskLevel predictiveRiskComponent, RiskLevel relationshipRiskComponent)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Risk()
+                property "dataio.default" "true";
+}
+
+public class RiskLevel
+        extends java.lang.Enum
+        property "ads.typeId" "4"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "RiskLevel"
+        property "de.generated" "true"
+{
+    domain {static high, static low, static medium}
+    public static final readonly RiskLevel high
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "high";
+    public static final readonly RiskLevel low
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "low";
+    public static final readonly RiskLevel medium
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "medium";
+}
+

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>evaluate bank relationship</name>
+  <uuid>3103d253-45bd-4d39-8788-a62ee10da554</uuid>
+  <locale>en_US</locale>
+  <definition><DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+    <Body>
+        <Properties>
+            <Property Name="UI.MediaType"><![CDATA[Web]]></Property>
+            <Property Name="UI.RenderBoolean" Type="xs:boolean"><![CDATA[true]]></Property>
+        </Properties>
+        <Structure>
+            <ConditionDefinitions>
+                <ConditionDefinition Id="C0">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the years with bank of the borrower of loan is <a number>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+                <ConditionDefinition Id="C1">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[the number of elements in the accountses of the co-borrower of loan equals <a number>]]></Text>
+                    </ExpressionDefinition>
+                </ConditionDefinition>
+            </ConditionDefinitions>
+            <ActionDefinitions>
+                <ActionDefinition Id="A2">
+                    <ExpressionDefinition>
+                        <Text><![CDATA[set the relationship risk component of decision to <a RiskLevel>]]></Text>
+                    </ExpressionDefinition>
+                </ActionDefinition>
+            </ActionDefinitions>
+        </Structure>
+        <Contents>
+            <Partition DefId="C0">
+                <Condition>
+                    <Expression>
+                        <Text><![CDATA[<a number> is more than <a number>]]></Text>
+                        <Param><![CDATA[10]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A2">
+                            <Expression>
+                                <Param><![CDATA[low]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Text><![CDATA[<a number> is more than <min> and at most <max>]]></Text>
+                        <Param><![CDATA[3]]></Param>
+                        <Param><![CDATA[10]]></Param>
+                    </Expression>
+                    <ActionSet>
+                        <Action DefId="A2">
+                            <Expression>
+                                <Param><![CDATA[medium]]></Param>
+                            </Expression>
+                        </Action>
+                    </ActionSet>
+                </Condition>
+                <Condition>
+                    <Expression>
+                        <Text><![CDATA[<a number> is at most <a number>]]></Text>
+                        <Param><![CDATA[3]]></Param>
+                    </Expression>
+                    <Partition DefId="C1">
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<a number> is at least <a number>]]></Text>
+                                <Param><![CDATA[2]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A2">
+                                    <Expression>
+                                        <Param><![CDATA[medium]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                        <Condition>
+                            <Expression>
+                                <Text><![CDATA[<a number> is less than <a number>]]></Text>
+                                <Param><![CDATA[2]]></Param>
+                            </Expression>
+                            <ActionSet>
+                                <Action DefId="A2">
+                                    <Expression>
+                                        <Param><![CDATA[high]]></Param>
+                                    </Expression>
+                                </Action>
+                            </ActionSet>
+                        </Condition>
+                    </Partition>
+                </Condition>
+            </Partition>
+        </Contents>
+    </Body>
+    <Resources DefaultLocale="en_US">
+        <ResourceSet Locale="en_US">
+            <Data Name="Definitions(A2)#Width"><![CDATA[125]]></Data>
+            <Data Name="Definitions(C0)#HeaderText"><![CDATA[yearsWithBank]]></Data>
+            <Data Name="Definitions(C1)#HeaderText"><![CDATA[accounts]]></Data>
+            <Data Name="Definitions(A2)[0]#HeaderText"><![CDATA[a RiskLevel]]></Data>
+            <Data Name="Definitions(C0)[0]#HeaderText"><![CDATA[min]]></Data>
+            <Data Name="Definitions(A2)#HeaderText"><![CDATA[relationship risk]]></Data>
+            <Data Name="Definitions(C1)#Width"><![CDATA[80]]></Data>
+            <Data Name="Definitions(C1)[0]#HeaderText"><![CDATA[a number]]></Data>
+            <Data Name="Definitions(C0)#Width"><![CDATA[123]]></Data>
+        </ResourceSet>
+    </Resources>
+</DT></definition>
+</ilog.rules.studio.model.dt:DecisionTable>

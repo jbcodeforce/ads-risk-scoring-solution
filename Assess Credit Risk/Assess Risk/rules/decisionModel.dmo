@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>c718379b-0f0e-4f36-ac83-aa48b9482eba</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="loan">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="Loan" collection="false" name="loan"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="loan" typeRef="Loan"/>
+    </inputData>
+    <decision id="node_1" name="relationship assessment">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="Loan" collection="false" name="loan"/>
+                <output bomType="Risk" collection="false" name="relationship assessment"/>
+                <rule defaultRule="false" href="node_1/evaluate%20bank%20relationship.dmt" kind="DecisionTable" name="evaluate bank relationship"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="relationship assessment" typeRef="Risk"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_3" name="combined assessment">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="Loan" collection="false" name="loan"/>
+                <input bomType="Risk" collection="false" name="relationship assessment"/>
+                <output bomType="Risk" collection="false" name="combined assessment"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_3_ii" name="combined assessment" typeRef="Risk"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#node_2"/>
+        </knowledgeRequirement>
+    </decision>
+    <businessKnowledgeModel id="node_2" name="Risk Prediction">
+        <extensionElements>
+            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <property name="ads.designer.bkKind"><![CDATA[prediction]]></property>
+            </properties>
+        </extensionElements>
+        <variable name="Risk Prediction" typeRef="java.lang.String"/>
+        <encapsulatedLogic typeRef="java.lang.String">
+            <formalParameter name="inputType" typeRef="java.lang.String"/>
+            <context>
+                <contextEntry>
+                    <variable name="class"/>
+                    <literalExpression>
+                        <text>"decisions.credit_risk.assess_credit_risk.riskPrediction.RiskPrediction"</text>
+                    </literalExpression>
+                </contextEntry>
+                <contextEntry>
+                    <variable name="method signature"/>
+                    <literalExpression>
+                        <text>"run(java.lang.String)"</text>
+                    </literalExpression>
+                </contextEntry>
+            </context>
+        </encapsulatedLogic>
+    </businessKnowledgeModel>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

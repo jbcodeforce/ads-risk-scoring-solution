@@ -1,0 +1,28 @@
+{
+  "metadata" : {
+    "id" : "dc41b7b2-5423-481e-b5b6-88133b7f2ce1",
+    "name" : "credit-risk-service",
+    "modified_at" : "2021-05-03T18:36:33.153Z",
+    "created_at" : "2021-05-03T18:36:33.153Z",
+    "owner" : "IBMid-270004HVF2",
+    "space_id" : "5a41aaae-0e02-4f02-8810-eb0b9a56b08e"
+  },
+  "entity" : {
+    "name" : "credit-risk-service",
+    "space_id" : "5a41aaae-0e02-4f02-8810-eb0b9a56b08e",
+    "custom" : { },
+    "online" : { },
+    "status" : {
+      "state" : "ready",
+      "online_url" : {
+        "url" : "https://us-south.ml.cloud.ibm.com/ml/v4/deployments/dc41b7b2-5423-481e-b5b6-88133b7f2ce1/predictions"
+      }
+    },
+    "asset" : {
+      "id" : "0d422dce-1e94-4e40-847a-7130841a96a5"
+    }
+  },
+  "name" : "credit-risk-service",
+  "status" : "ready",
+  "deployedAt" : "2021-05-03T18:36:33.153Z"
+}

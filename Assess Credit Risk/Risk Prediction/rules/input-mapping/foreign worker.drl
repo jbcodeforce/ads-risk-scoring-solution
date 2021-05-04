@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>foreign worker</name>
+  <uuid>2fdf6c34-ea54-42ac-9df4-a5bef13ad415</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if 
+	the borrower of Loan is citizen
+then
+	set the foreignworker of decision to "no" ;
+else
+	set the foreignworker of decision to "yes" ;
+]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

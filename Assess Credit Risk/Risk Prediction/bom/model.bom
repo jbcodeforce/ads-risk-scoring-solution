@@ -1,0 +1,175 @@
+
+package decisions.credit_risk.assess_credit_risk.riskPrediction;
+
+
+public class Error
+        property "ads.typeId" "2"
+        property "de.generated" "true"
+{
+    public string code
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "code";
+    public string message
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "message";
+    public Error(string code, string message)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Error()
+                property "dataio.default" "true";
+}
+
+public class Input
+        property "ads.typeId" "1"
+        property "com.fasterxml.jackson.annotation.JsonPropertyOrder" "{CheckingStatus,LoanDuration,CreditHistory,LoanPurpose,LoanAmount,ExistingSavings,EmploymentDuration,InstallmentPercent,Sex,OthersOnLoan,CurrentResidenceDuration,OwnsProperty,Age,InstallmentPlans,Housing,ExistingCreditsCount,Job,Dependents,Telephone,ForeignWorker}"
+        property "de.generated" "true"
+{
+    public java.lang.Long age
+                property "ads.attributeId" "13"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Age";
+    public string checkingstatus
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "CheckingStatus";
+    public string credithistory
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "CreditHistory";
+    public java.lang.Long currentresidenceduration
+                property "ads.attributeId" "11"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "CurrentResidenceDuration";
+    public java.lang.Long dependents
+                property "ads.attributeId" "18"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Dependents";
+    public string employmentduration
+                property "ads.attributeId" "7"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "EmploymentDuration";
+    public java.lang.Long existingcreditscount
+                property "ads.attributeId" "16"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "ExistingCreditsCount";
+    public string existingsavings
+                property "ads.attributeId" "6"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "ExistingSavings";
+    public string foreignworker
+                property "ads.attributeId" "20"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "ForeignWorker";
+    public string housing
+                property "ads.attributeId" "15"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Housing";
+    public java.lang.Long installmentpercent
+                property "ads.attributeId" "8"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "InstallmentPercent";
+    public string installmentplans
+                property "ads.attributeId" "14"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "InstallmentPlans";
+    public string job
+                property "ads.attributeId" "17"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Job";
+    public java.lang.Long loanamount
+                property "ads.attributeId" "5"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "LoanAmount";
+    public java.lang.Long loanduration
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "LoanDuration";
+    public string loanpurpose
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "LoanPurpose";
+    public string othersonloan
+                property "ads.attributeId" "10"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "OthersOnLoan";
+    public string ownsproperty
+                property "ads.attributeId" "12"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "OwnsProperty";
+    public string sex
+                property "ads.attributeId" "9"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Sex";
+    public string telephone
+                property "ads.attributeId" "19"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Telephone";
+    public Input(java.lang.Long age, 
+        string checkingstatus, 
+        string credithistory, 
+        java.lang.Long currentresidenceduration, 
+        java.lang.Long dependents, 
+        string employmentduration, 
+        java.lang.Long existingcreditscount, 
+        string existingsavings, 
+        string foreignworker, 
+        string housing, 
+        java.lang.Long installmentpercent, 
+        string installmentplans, 
+        string job, 
+        java.lang.Long loanamount, 
+        java.lang.Long loanduration, 
+        string loanpurpose, 
+        string othersonloan, 
+        string ownsproperty, 
+        string sex, 
+        string telephone)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Input()
+                property "dataio.default" "true";
+}
+
+public class Output
+        property "ads.typeId" "3"
+        property "com.fasterxml.jackson.annotation.JsonIgnoreProperties" {
+            ignoreUnknown "true"
+        }
+        property "de.generated" "true"
+{
+    public decisions.credit_risk.assess_credit_risk.riskPrediction.Error error
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "error";
+    public string prediction
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "prediction";
+    public java.util.List probability domain 0,* class java.lang.Double
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "probability";
+    public Output(string prediction, 
+        java.util.List probability domain 0,* class java.lang.Double)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Output()
+                property "dataio.default" "true";
+    public void addTo_probability(java.lang.Double probability)
+                property collectionAttribute "probability"
+                property update "true";
+    public void clear_probability()
+                property collectionAttribute "probability"
+                property update "true";
+    public boolean inError()
+                property "de.generated" {
+                    $gen "com.ibm.decision.ml.integration.xom.InErrorTestGenerator",
+                    $target "BOM"
+                };
+    public void removeFrom_probability(java.lang.Double probability)
+                property collectionAttribute "probability"
+                property update "true";
+    public static Output run(decisions.credit_risk.assess_credit_risk.riskPrediction.Input input)
+                property "de.generated" {
+                    $gen "com.ibm.decision.ml.integration.client.wml.xom.PredictionCallGenerator",
+                    $target "BOM",
+                    deploymentId "dc41b7b2-5423-481e-b5b6-88133b7f2ce1",
+                    providerName "decisions/Credit-Risk/WML on IBM Cloud1620083855675"
+                }
+                property pureFunction "true";
+    public static Output run(com.ibm.decision.run.RunContext runContext, decisions.credit_risk.assess_credit_risk.riskPrediction.Input input)
+                property "de.generated" {
+                    $gen "com.ibm.decision.ml.integration.client.wml.xom.PredictionRunGenerator",
+                    $target "BOM",
+                    deploymentId "dc41b7b2-5423-481e-b5b6-88133b7f2ce1",
+                    providerName "decisions/Credit-Risk/WML on IBM Cloud1620083855675"
+                }
+                property pureFunction "true";
+    public void set_probability(java.util.Collection probability domain 0,* class java.lang.Double)
+                property collectionAttribute "probability"
+                property update "true";
+}
+

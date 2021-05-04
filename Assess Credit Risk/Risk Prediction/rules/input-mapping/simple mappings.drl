@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>simple mappings</name>
+  <uuid>86156642-a2ef-4dec-830b-51a7a6dd8a1c</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to a new ML model input where
+		the age is the age of the borrower of Loan , 
+		the credithistory is the credit history of the borrower of Loan , 
+		the currentresidenceduration is the years at current address of the borrower of Loan , 
+		the dependents is the dependents of the borrower of Loan , 
+		the employmentduration is the years employed of the borrower of Loan , 
+		the existingcreditscount is the number of elements in the accountses of the borrower of Loan , 
+		the housing is the housing of the borrower of Loan , 
+		the installmentpercent is the installment percent of Loan , 
+		the installmentplans is the installment plans of the borrower of Loan , 
+		the job is the job type of the borrower of Loan , 
+		the loanamount is the loan amount of Loan , 
+		the loanduration is the duration of Loan , 
+		the loanpurpose is the loan purpose of Loan , 
+		the ownsproperty is the property ownership of the borrower of Loan , 
+		the sex is the sex of the borrower of Loan ; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

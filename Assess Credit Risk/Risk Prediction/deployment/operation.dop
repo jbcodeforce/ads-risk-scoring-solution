@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Risk Prediction">
+  <name>riskPrediction</name>
+  <uuid>fe189030-295e-40b8-b1b9-e3dabcbd867e</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#674f9aef-548b-4b7f-bf62-cc9a6e6d90be"/>
+  <targetRuleProject href="../../Risk%20Prediction#dc055374-ca51-44b6-bc2c-a657f5d65972"/>
+  <tags key="ProviderType">
+    <value><![CDATA[OPS]]></value>
+  </tags>
+</com.ibm.rules.studio.model.decisionservice:Operation>

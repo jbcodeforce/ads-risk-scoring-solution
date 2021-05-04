@@ -1,0 +1,105 @@
+{
+  "metadata" : {
+    "id" : "0d422dce-1e94-4e40-847a-7130841a96a5",
+    "name" : "Credit Scoring - P8 LGBMClassifierEstimator",
+    "modified_at" : "2021-05-03T18:30:37.619Z",
+    "created_at" : "2021-05-03T18:30:36.364Z",
+    "owner" : "IBMid-270004HVF2",
+    "space_id" : "5a41aaae-0e02-4f02-8810-eb0b9a56b08e"
+  },
+  "entity" : {
+    "content_import_state" : "completed",
+    "type" : "wml-hybrid_0.1",
+    "schemas" : {
+      "input" : [ {
+        "id" : "auto_ai_kb_input_schema",
+        "fields" : [ {
+          "name" : "CheckingStatus",
+          "type" : "other",
+          "nullable" : true
+        }, {
+          "name" : "LoanDuration",
+          "type" : "integer",
+          "nullable" : true
+        }, {
+          "name" : "CreditHistory",
+          "type" : "other",
+          "nullable" : true
+        }, {
+          "name" : "LoanPurpose",
+          "type" : "other",
+          "nullable" : true
+        }, {
+          "name" : "LoanAmount",
+          "type" : "integer",
+          "nullable" : true
+        }, {
+          "name" : "ExistingSavings",
+          "type" : "other",
+          "nullable" : true
+        }, {
+          "name" : "EmploymentDuration",
+          "type" : "other",
+          "nullable" : true
+        }, {
+          "name" : "InstallmentPercent",
+          "type" : "integer",
+          "nullable" : true
+        }, {
+          "name" : "Sex",
+          "type" : "other",
+          "nullable" : true
+        }, {
+          "name" : "OthersOnLoan",
+          "type" : "other",
+          "nullable" : true
+        }, {
+          "name" : "CurrentResidenceDuration",
+          "type" : "integer",
+          "nullable" : true
+        }, {
+          "name" : "OwnsProperty",
+          "type" : "other",
+          "nullable" : true
+        }, {
+          "name" : "Age",
+          "type" : "integer",
+          "nullable" : true
+        }, {
+          "name" : "InstallmentPlans",
+          "type" : "other",
+          "nullable" : true
+        }, {
+          "name" : "Housing",
+          "type" : "other",
+          "nullable" : true
+        }, {
+          "name" : "ExistingCreditsCount",
+          "type" : "integer",
+          "nullable" : true
+        }, {
+          "name" : "Job",
+          "type" : "other",
+          "nullable" : true
+        }, {
+          "name" : "Dependents",
+          "type" : "integer",
+          "nullable" : true
+        }, {
+          "name" : "Telephone",
+          "type" : "other",
+          "nullable" : true
+        }, {
+          "name" : "ForeignWorker",
+          "type" : "other",
+          "nullable" : true
+        } ]
+      } ],
+      "output" : [ ]
+    }
+  },
+  "id" : "0d422dce-1e94-4e40-847a-7130841a96a5",
+  "name" : "Credit Scoring - P8 LGBMClassifierEstimator",
+  "trainedAt" : "2021-05-03T18:30:36.364Z",
+  "modifiedAt" : "2021-05-03T18:30:37.619Z"
+}
