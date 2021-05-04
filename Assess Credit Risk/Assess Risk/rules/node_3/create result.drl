@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>create result</name>
+  <uuid>d6345d6f-2a20-4118-b2d5-883f69e0081e</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to a new Risk where
+		the predictive risk component is the risk prediction computed from Loan being loan , 
+		the relationship risk component is 'relationship assessment' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -19,11 +19,11 @@
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
                 <input bomType="Loan" collection="false" name="loan"/>
-                <output bomType="Risk" collection="false" name="relationship assessment"/>
+                <output bomType="RiskLevel" collection="false" name="relationship assessment"/>
                 <rule defaultRule="false" href="node_1/evaluate%20bank%20relationship.dmt" kind="DecisionTable" name="evaluate bank relationship"/>
             </ruleset>
         </extensionElements>
-        <variable id="node_1_ii" name="relationship assessment" typeRef="Risk"/>
+        <variable id="node_1_ii" name="relationship assessment" typeRef="RiskLevel"/>
         <informationRequirement>
             <requiredInput href="#node_0"/>
         </informationRequirement>
@@ -32,8 +32,10 @@
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
                 <input bomType="Loan" collection="false" name="loan"/>
-                <input bomType="Risk" collection="false" name="relationship assessment"/>
+                <input bomType="RiskLevel" collection="false" name="relationship assessment"/>
                 <output bomType="Risk" collection="false" name="combined assessment"/>
+                <rule defaultRule="false" href="node_3/create%20result.drl" kind="BusinessRule" name="create result"/>
+                <rule defaultRule="false" href="node_3/combined%20risk.dmt" kind="DecisionTable" name="combined risk"/>
             </ruleset>
         </extensionElements>
         <variable id="node_3_ii" name="combined assessment" typeRef="Risk"/>
@@ -53,8 +55,8 @@
                 <property name="ads.designer.bkKind"><![CDATA[prediction]]></property>
             </properties>
         </extensionElements>
-        <variable name="Risk Prediction" typeRef="java.lang.String"/>
-        <encapsulatedLogic typeRef="java.lang.String">
+        <variable name="Risk Prediction" typeRef="RiskLevel"/>
+        <encapsulatedLogic typeRef="RiskLevel">
             <formalParameter name="loan" typeRef="Loan"/>
             <context>
                 <contextEntry>

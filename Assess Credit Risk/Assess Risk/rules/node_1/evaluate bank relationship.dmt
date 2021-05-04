@@ -25,7 +25,7 @@
             <ActionDefinitions>
                 <ActionDefinition Id="A2">
                     <ExpressionDefinition>
-                        <Text><![CDATA[set the relationship risk component of decision to <a RiskLevel>]]></Text>
+                        <Text><![CDATA[set decision to <a RiskLevel> ]]></Text>
                     </ExpressionDefinition>
                 </ActionDefinition>
             </ActionDefinitions>

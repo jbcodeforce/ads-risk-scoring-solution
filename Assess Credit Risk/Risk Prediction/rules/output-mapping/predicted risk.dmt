@@ -20,7 +20,7 @@
             <ActionDefinitions>
                 <ActionDefinition Id="A0">
                     <ExpressionDefinition>
-                        <Text><![CDATA[set decision to <a string>]]></Text>
+                        <Text><![CDATA[set decision to <a RiskLevel> ]]></Text>
                     </ExpressionDefinition>
                 </ActionDefinition>
             </ActionDefinitions>
@@ -34,7 +34,7 @@
                     <ActionSet>
                         <Action DefId="A0">
                             <Expression>
-                                <Param><![CDATA["low"]]></Param>
+                                <Param><![CDATA[low]]></Param>
                             </Expression>
                         </Action>
                     </ActionSet>
@@ -46,7 +46,7 @@
                     <ActionSet>
                         <Action DefId="A0">
                             <Expression>
-                                <Param><![CDATA["high"]]></Param>
+                                <Param><![CDATA[high]]></Param>
                             </Expression>
                         </Action>
                     </ActionSet>
@@ -58,6 +58,7 @@
         <ResourceSet Locale="en_US">
             <Data Name="Definitions(C0)#HeaderText"><![CDATA[prediction]]></Data>
             <Data Name="Definitions(A0)#Width"><![CDATA[106]]></Data>
+            <Data Name="Definitions(A0)[0]#HeaderText"><![CDATA[a string]]></Data>
             <Data Name="Definitions(A0)#HeaderText"><![CDATA[Output mapping]]></Data>
             <Data Name="Definitions(C0)#Width"><![CDATA[80]]></Data>
         </ResourceSet>

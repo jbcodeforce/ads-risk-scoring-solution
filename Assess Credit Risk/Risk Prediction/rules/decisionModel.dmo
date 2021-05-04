@@ -57,11 +57,11 @@
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
                 <input bomType="decisions.credit_risk.assess_credit_risk.riskPrediction.Output" collection="false" name="ML model invocation"/>
-                <output bomType="java.lang.String" collection="false" name="Output mapping"/>
+                <output bomType="RiskLevel" collection="false" name="Output mapping"/>
                 <rule defaultRule="false" href="output-mapping/predicted%20risk.dmt" kind="DecisionTable" name="predicted risk"/>
             </ruleset>
         </extensionElements>
-        <variable id="output_mapping_ii" name="Output mapping" typeRef="java.lang.String"/>
+        <variable id="output_mapping_ii" name="Output mapping" typeRef="RiskLevel"/>
         <informationRequirement>
             <requiredInput href="#output"/>
         </informationRequirement>
