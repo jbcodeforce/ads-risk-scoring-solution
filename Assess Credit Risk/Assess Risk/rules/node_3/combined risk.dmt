@@ -106,12 +106,13 @@
     <Resources DefaultLocale="en_US">
         <ResourceSet Locale="en_US">
             <Data Name="Definitions(C0)#HeaderText"><![CDATA[relationship assessment]]></Data>
-            <Data Name="Definitions(A0)#Width"><![CDATA[400]]></Data>
+            <Data Name="Definitions(A0)#Width"><![CDATA[238]]></Data>
+            <Data Name="Definitions(C3)#Width"><![CDATA[238]]></Data>
             <Data Name="Definitions(C3)#HeaderText"><![CDATA[predictive assessment]]></Data>
             <Data Name="Definitions(A0)[0]#HeaderText"><![CDATA[combined value]]></Data>
             <Data Name="Definitions(C0)[0]#HeaderText"><![CDATA[a RiskLevel]]></Data>
             <Data Name="Definitions(A0)#HeaderText"><![CDATA[combined assessment]]></Data>
-            <Data Name="Definitions(C0)#Width"><![CDATA[163]]></Data>
+            <Data Name="Definitions(C0)#Width"><![CDATA[216]]></Data>
         </ResourceSet>
     </Resources>
 </DT></definition>
