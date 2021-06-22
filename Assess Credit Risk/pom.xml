@@ -3,7 +3,7 @@
 
     <groupId>decisions.credit_risk.assess_credit_risk</groupId>
     <artifactId>assessCreditRisk</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <packaging>pom</packaging>
 
