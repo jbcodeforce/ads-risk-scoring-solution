@@ -6,9 +6,13 @@ Basically we have the following structure:
 * Assess Credit Risk to include all the elements for ADS decision service
 * CreditOriginationApp a Java Quarkus client app to prepare the data for the credit, call the decision service and get the response. 
 The idea is to share best practice on how decision service can be integrated with some focus on data for the deicison.
-* GitOps folder to include environment deployment definitions and application deployment manifests to be used by
-Tekton pipeline and ArgoCD deployment. 
 
+This repository has companion repositories to manage the GitOps:
+
+* [dba-gitops-catalog]() to define the different product operator
+* [ads-risk-scoring-infra](https://github.com/jbcodeforce/ads-risk-scoring-gitops-infra.git) to define cluster configuration like namespaces, storage...
+* [ads-risk-scoring-services](https://github.com/jbcodeforce/ads-risk-scoring-gitops-services.git) to define the product instances to be used by the solution
+* [ads-risk-scoring-apps](https://github.com/jbcodeforce/ads-risk-scoring-gitops-apps.git) to define how to deploy the different application, it will be used by the different argoCD applications
 
 ## Pre-requisites
 
